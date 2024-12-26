@@ -1,14 +1,16 @@
+import Button from './Button';
 import styled from './MenuDestinations.module.css';
 
 function MenuDestinations () {
 
 
+
     return(
         <div className={styled.menu}>
-            <button key='Moon'>MOON</button>
-            <button key='Mars'>MARS</button>
-            <button key='Europe'>EUROPE</button>
-            <button Key='Titan'>TITAN</button>
+            <Button nome='Moon'>MOON</Button>
+            <Button nome='Mars'>MARS</Button>
+            <Button nome='Europe'>EUROPE</Button>
+            <Button nome='Titan'>TITAN</Button>
         </div>
     )
 }

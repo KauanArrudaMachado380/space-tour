@@ -7,6 +7,10 @@
     color: var(--accent);
 }
 
+.link:hover{
+    border-bottom: 3px solid gray;
+    padding-bottom: 30px;
+}
 
 .linkAcessado{
     box-sizing: border-box;
