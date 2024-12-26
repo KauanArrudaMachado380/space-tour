@@ -1,10 +1,11 @@
+import Background from '../../Componentes/Fundo';
 import styled from './Crew.module.css';
 
 function Crew() {
     return (
-        <div className={styled.crew}>
+        <Background namePage='crew' className={styled.crew}>
             <h1>Crew</h1>
-        </div>
+        </Background>
     );
 }
 

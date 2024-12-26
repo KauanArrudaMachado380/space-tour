@@ -1,0 +1,59 @@
+.home{
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: left;
+    height: 100vh;
+    grid-template-areas: 
+    "blank blank"
+    "texto botao";
+    padding: 0 7em;
+    column-gap: 20px;
+}
+
+/* text */
+
+.texto{
+    grid-area: texto;
+}
+
+.texto h2{
+    font-size: 28px;
+    color: var(--secondary);
+    font-family: var(--font-primary);
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
+.texto h1{
+    font-size: 150px;
+    color: var(--accent);
+    font-family: var(--font-primary);
+    font-weight: 400;
+}
+
+.texto p{
+    font-size: 24px;
+    color: var(--secondary);
+    font-family: var(--font-secundary);
+    font-weight: 400;
+    line-height: 1.5em;
+    margin-top: 1em;
+    padding-right: 1em;
+}
+
+/* botao */
+
+.containerButton{
+    grid-area: botao;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 7rem;
+}
+

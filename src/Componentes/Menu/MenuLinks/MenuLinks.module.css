@@ -1,0 +1,15 @@
+.link{
+    color: var(--accent);
+    text-decoration: none;
+    margin-right: 38px;
+    font-size: 15px;
+    font-family: var(--font-primary);
+    color: var(--accent);
+}
+
+
+.linkAcessado{
+    box-sizing: border-box;
+    padding-bottom: 30px;
+    border-bottom: 3px solid var(--accent);
+}

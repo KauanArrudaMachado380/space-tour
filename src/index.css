@@ -10,6 +10,7 @@
     --accent: #ffffff;
 
     --font-primary: 'Bellefair', serif;
+    --font-secundary: 'Barlow Condensed', sans-serif;
     
     font-family: var(--font-primary);
 }

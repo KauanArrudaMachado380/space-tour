@@ -5,21 +5,23 @@ import logo from './logo.svg';
 function Menu() {
     return (
         <header className={styled.menu}>
-            <img src={logo} alt="Logo" />
-            <nav>
-                <MenuLinks direction='/'>
-                    Home
-                </MenuLinks>
-                <MenuLinks direction='/destinations'>
-                    Destinations
-                </MenuLinks>
-                <MenuLinks direction='/crew'>
-                    Crew
-                </MenuLinks>
-                <MenuLinks direction='/technology'>
-                    Technology
-                </MenuLinks>
-            </nav>
+            <div>
+                <img src={logo} alt="Logo" />
+                <nav className={styled.nav}>
+                    <MenuLinks direction='/'>
+                       00 HOME
+                    </MenuLinks>
+                    <MenuLinks direction='/destinations'>
+                       01 DESTINATIONS
+                    </MenuLinks>
+                    <MenuLinks direction='/crew'>
+                       02 CREW
+                    </MenuLinks>
+                    <MenuLinks direction='/technology'>
+                       03 TECHNOLOGY
+                    </MenuLinks>
+                </nav>
+            </div>
         </header>
     );
 }
