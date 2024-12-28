@@ -1,16 +1,9 @@
 import styled from './Button.module.css';
 
-function Button({nome, children}){
-
-    function readingName (name){
-        return console.log(name);
-    }
+function Button({ onClicked, nome, children}){
 
     return(
-        <button key={nome} className={styled.button} onClick={(evento) => {
-            evento.preventDefault();
-            readingName(nome);
-        }}>
+        <button className={styled.button} onClick={() => onClicked(nome)}>
             {children}
         </button>
     )

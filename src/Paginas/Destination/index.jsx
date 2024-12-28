@@ -2,27 +2,36 @@ import Background from '../../Componentes/Fundo';
 import MenuDestinations from '../../Componentes/MenuDestinations';
 import styled from './Destination.module.css';
 
-import destination from '../../json/data.json';
+import data from '../../json/data.json';
+import { useState } from 'react';
 
 function Destination() {
+
+    const [destinations, setDestinations] = useState(data.destinations[0]);
+
+    function changeDestination (nome) {
+        const newDestination = data.destinations.find((destination) => destination.name === nome);
+        setDestinations(newDestination);
+    }
+
     return(
-        <Background namePage='destination' className={styled.destination}>
+        <Background namePage='destination'>
             <div className={styled.container}>
                 <h1><strong>01</strong> PICK YOUR DESTINATION</h1>
                 <section className={styled.card}>
-                    <img src={destination.destinations[0].images.png} alt={destination.destinations[0].name} />
+                    <img src={destinations.images.png} alt={destinations.name} />
                     <div className={styled.text}>
-                        <MenuDestinations />
-                        <h2>{destination.destinations[0].name.toUpperCase()}</h2>
-                        <p>{destination.destinations[0].description}</p>
+                        <MenuDestinations onButtonClick={changeDestination}/>
+                        <h2>{destinations.name.toUpperCase()}</h2>
+                        <p>{destinations.description}</p>
                         <div className={styled.metrics}>
                             <div>
                                 <p>AVG. DISTANCE</p>
-                                <h3>{destination.destinations[0].distance.toUpperCase()}</h3>
+                                <h3>{destinations.distance.toUpperCase()}</h3>
                             </div>
                             <div>
                                 <p>EST.TRAVEL TIME</p>
-                                <h3>{destination.destinations[0].travel.toUpperCase()}</h3>
+                                <h3>{destinations.travel.toUpperCase()}</h3>
                             </div>
                         </div>
                     </div>

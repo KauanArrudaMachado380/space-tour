@@ -1,16 +1,14 @@
 import Button from './Button';
 import styled from './MenuDestinations.module.css';
 
-function MenuDestinations () {
-
-
+function MenuDestinations ({onButtonClick}) {
 
     return(
         <div className={styled.menu}>
-            <Button nome='Moon'>MOON</Button>
-            <Button nome='Mars'>MARS</Button>
-            <Button nome='Europe'>EUROPE</Button>
-            <Button nome='Titan'>TITAN</Button>
+            <Button onClicked={onButtonClick} nome='Moon'>MOON</Button>
+            <Button onClicked={onButtonClick} nome='Mars'>MARS</Button>
+            <Button onClicked={onButtonClick} nome='Europa'>EUROPA</Button>
+            <Button onClicked={onButtonClick} nome='Titan'>TITAN</Button>
         </div>
     )
 }

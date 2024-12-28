@@ -30,6 +30,7 @@
     display: grid;
     grid-template-columns: 576px 432px;
     justify-content: center;
+
 }
 
 .text{
