@@ -1,0 +1,63 @@
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 200px 100px 1fr;
+    grid-template-areas:
+    'none'
+    'titule'
+    'text'
+    ;
+}
+
+.container h1{
+    grid-area: titule;
+    color: var(--accent);
+    margin-left: 6em;
+    font-size: 28px;
+    font-family: var(--font-secundary);
+    font-weight: 400;
+    word-spacing: .5em;
+    letter-spacing: .1em;
+
+    strong{
+        color: rgba(255, 255, 255, 0.644);
+    }
+}
+
+.containerTech{
+    grid-area: text;
+    display: flex;
+    align-items: center;
+    padding-left: 5em;
+
+    gap: 70px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text h3{
+    color: rgba(255, 255, 255, 0.644);
+    font-size: 42px;
+    letter-spacing: .1em;
+    font-weight: 400;
+    font-family: var(--font-secundary);
+}
+
+.text h2{
+    color: var(--accent);
+    font-family: var(--font-primary);
+    font-size: 4.5em;
+    font-weight: 400;
+}
+
+.text p{
+    color: var(--secondary);
+    font-size: 24px;
+    line-height: 1.5em;
+    font-family: var(--font-secundary);
+    font-weight: 400;
+}

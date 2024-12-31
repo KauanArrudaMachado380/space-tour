@@ -3,7 +3,7 @@ import styled from './Crew.module.css';
 
 import data from '../../json/data.json';
 import { useState } from 'react';
-import ContainerButtonCrew from '../../Componentes/ButtonCrew/Button';
+import ContainerButtonCrew from '../../Componentes/ButtonCrew';
 
 function Crew() {
 

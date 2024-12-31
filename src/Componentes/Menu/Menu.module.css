@@ -11,6 +11,15 @@
     align-items: center;
 }
 
+.line{
+    width: 660px;
+    position: absolute;
+    left: 9.5em;
+    z-index: 4;
+    
+    border-bottom: 1px solid var(--accent);
+}
+
 .nav{
     background-color: rgba(85, 85, 85, 0.39);
     backdrop-filter: blur(5px);

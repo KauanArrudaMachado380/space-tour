@@ -8,7 +8,7 @@ function Background({namePage, children}) {
     const image = () => {
         if(size <= 450){
             return `background-${namePage}-mobile.jpg`
-        } else if(size <= 1200){
+        } else if(size <= 1300){
             return `background-${namePage}-tablet.jpg`
         } else {
             return `background-${namePage}-desktop.jpg`

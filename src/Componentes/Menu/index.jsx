@@ -1,12 +1,21 @@
+import { useSizeScreen } from '../../Hooks/useSizeScreen';
 import styled from './Menu.module.css'
 import MenuLinks from './MenuLinks';
 import logo from './logo.svg';
 
 function Menu() {
+
+    const size = useSizeScreen();
+
+    const imagemBarra = () => {
+
+    }
+
     return (
         <header className={styled.menu}>
             <div>
-                <img src={logo} alt="Logo" />
+                <img className={styled.logo} src={logo} alt="Logo" />
+                <div className={styled.line}></div>
                 <nav className={styled.nav}>
                     <MenuLinks direction='/'>
                        00 HOME

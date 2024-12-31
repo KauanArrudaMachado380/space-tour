@@ -1,7 +1,6 @@
 .containerButton{
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    gap: 40px;
     align-items: center;
-
+    justify-content: left;
 }

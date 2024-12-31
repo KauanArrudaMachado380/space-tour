@@ -1,0 +1,11 @@
+.button{
+    background-color: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+
+    font-size: 32px;
+    font-family: var(--font-secundary);
+
+    padding: 20px 32px 22px 32px;
+    border-radius: 180px;
+}
