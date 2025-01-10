@@ -1,59 +1,134 @@
-.home{
-    height: 100vh;
-}
+/* Container pai */
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 200px auto 1fr;
     justify-content: center;
-    align-items: left;
+    align-items: center;
     height: 100vh;
     grid-template-areas: 
-    "blank blank"
-    "texto botao";
-    padding: 0 7em;
-    column-gap: 20px;
+    "blank"
+    "texto"
+    "botao";
+    padding: 0;
 }
 
-/* text */
+/* texto */
 
 .texto{
     grid-area: texto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .texto h2{
-    font-size: 28px;
+    font-size: 18px;
     color: var(--secondary);
     font-family: var(--font-primary);
     font-weight: 400;
     margin-bottom: 1em;
+    
 }
 
 .texto h1{
-    font-size: 150px;
+    font-size: 6em;
     color: var(--accent);
     font-family: var(--font-primary);
     font-weight: 400;
+    
 }
 
 .texto p{
-    font-size: 24px;
+    font-size: 20px;
     color: var(--secondary);
     font-family: var(--font-secundary);
     font-weight: 400;
     line-height: 1.5em;
-    margin-top: 1em;
-    padding-right: 1em;
+    margin-bottom: 1em;
+    padding: 0 1.5em 20px 1.5em;
 }
 
-/* botao */
+/* botão */
 
 .containerButton{
     grid-area: botao;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 7rem;
+    padding-bottom: 4rem;
 }
 
+/* Responsividade: Tablet */
+
+@media(min-width: 700px){
+
+    /* Container pai */
+
+    .container{
+        grid-template-rows: 300px auto 1fr;
+    }
+
+    /* texto */
+
+    .texto h2{
+        font-size: 24px;
+    }
+
+    .texto h1{
+        font-size: 150px;
+    }
+
+    .texto p{
+        font-size: 22px;
+        padding: 0 5.5em;
+    }
+}
+
+/* Responsividade: Desktop */
+
+@media (min-width: 1400px){
+
+    /* Container pai */
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: left;
+        grid-template-areas: 
+        "blank blank"
+        "texto botao";
+        padding: 0 7em;
+        column-gap: 20px;
+    }
+
+    /* texto */
+
+    .texto{
+        grid-area: texto;
+        text-align: left;
+    }
+
+    .texto h2{
+        font-size: 28px;
+        padding-left: 10px;
+    }
+
+    .texto h1{
+        font-size: 150px;
+    }
+
+    .texto p{
+        font-size: 24px;
+        padding: 0 1.5em 0 0;
+    }
+
+    /* botão */
+
+    .containerButton{
+        grid-area: botao;
+        justify-content: right;
+    }
+
+}

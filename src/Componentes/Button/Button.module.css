@@ -1,10 +1,12 @@
+
 .button{
     border: none;
-    width: 272px;
-    height: 272px;
+    width: 190px;
+    height: 190px;
     border-radius: 180px;
 
-    font-size: 42px;
+    font-size: 32px;
+    font-weight: 400;
     font-family: var(--font-secundary);
     padding: 5px;
 
@@ -15,3 +17,20 @@
 .button:hover{
     box-shadow: 0 0 20px 70px  rgba(194, 193, 193, 0.795);
 }
+
+@media(min-width: 650px){
+    .button{
+        width: 220px;
+        height: 220px;
+        font-size: 36px
+    }
+}
+
+@media (min-width: 1400px){
+    .button{
+        width: 272px;
+        height: 272px;
+        font-size: 42px;
+    }
+}
+

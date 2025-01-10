@@ -1,6 +1,8 @@
+/* Container pai */
+
 .container{
     display: grid;
-    grid-template-rows: 200px auto 1fr;
+    grid-template-rows: 120px auto 1fr;
     grid-template-areas: 
         'none'
         'title'
@@ -11,7 +13,7 @@
 
 .container h1{
     grid-area: title;
-    margin-left: 7rem;
+    text-align: center;
     color: var(--accent);
     font-family: var(--font-secundary);
     font-size: 24px;
@@ -22,58 +24,206 @@
     }
 }
 
+/* Conteudo */
+
 .containerCrew{
     box-sizing: border-box;
     grid-area: crew;
-
     display: grid;
-    grid-template-columns: 550px 1fr;
     justify-content: center;
-    align-items: left;
-
-    padding: 0 7em;
-    column-gap: 20px;
+    grid-template-rows: 370px 450px;
+    align-items: center;
+    padding: 0 1em;
 }
 
-.containerCrew img{
-    align-self: center;
+/* Imagem */
+
+.crewImg {
+    padding-top: 20px;
 }
+
+.crewImg img{
+    width: 80%;
+    margin-left: 2em;
+    z-index: 1;
+}
+
+.line{
+    position: relative;
+    z-index: 3;
+    width: auto;
+    height: 10px;
+    box-shadow: 10px -10px 20px 20px  var(--primary);
+}
+
+/* Texto */
 
 .crewText{
     display: grid;
-    justify-content: center;
-    align-items: center;
+    grid-template-rows: 250px 10px;
+    row-gap: 20px;
 }
 
 .text{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    gap: 20px;
+    text-align: center;
 }
 
-.text h3{
-    font-size: 30px;
-    color: rgba(255, 255, 255, 0.377);
+.text h2{
+    font-size: 28px;
+    color: var(--accent);
     font-family: var(--font-primary);
     font-weight: 400;
     margin-bottom: .5em;
 }
 
-.text h2{
-    font-size: 3.5em;
-    color: var(--accent);
+.text h3{
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.377);
     font-family: var(--font-primary);
     font-weight: 400;
+    margin: 0 0 .2em 0;
 }
 
 .text p{
-    font-size: 22px;
+    font-size: 18px;
     color: var(--secondary);
     font-family: var(--font-secundary);
     font-weight: 400;
     line-height: 1.5em;
-    text-align: left;
-    padding-right: 1em;
+    text-align: center;
+    padding: 0 1.5em;
+}
+
+/* Responsividade: Tablet */
+
+@media(min-width: 700px){
+
+    /* Container pai */
+
+    .container{
+        grid-template-rows: 200px 100px 1fr;
+    }
+
+    .container h1{
+        text-align: left;
+        padding-left: 1.5em;
+        font-size: 28px;
+    }
+
+    /* Conteudo */
+
+    .containerCrew{
+        grid-template-rows: auto;
+        row-gap: 20px;
+    }
+
+    /* Imagem */
+
+    .crewImg{
+        width: 70%;
+        margin: auto;
+    }
+
+    .crewImg img{
+        margin-left: 5em;
+    }
+
+    /* Texto */
+
+    .text h3{
+        font-size: 30px;
+    }
+
+    .text h2{
+        font-size: 50px;
+        margin: 10px 0;
+    }
+
+    .text p{
+        font-size: 22px;
+        padding: 0 5em;
+    }
+}
+
+/* Responsividade: Desktop */
+
+@media(min-width: 1400px){
+
+    /* Container pai */
+
+    .container{
+        grid-template-rows: 200px repeat(2, auto);
+    }
+
+    .container h1{
+        text-align: left;
+        margin-left: 4rem;
+        font-size: 28px;
+    }
+
+    /* Conteudo */
+
+    .containerCrew{
+
+        grid-template-columns: 550px 750px;
+        justify-content: center;
+        align-items: left;
+
+        padding: 0 7em;
+        column-gap: 20px;
+    }
+
+    /* Imagem */
+
+    .crewImg {
+        width: 100%;
+        align-self: center;
+        padding: 0;
+    }
+
+    .crewImg img{
+        width: 64%;
+    }
+
+
+    .line{
+        position: absolute;
+        width: 660px;
+        height: 13px;
+        bottom: 10;
+        left: 45%;
+    }
+
+    /* Texto */
+
+    .crewText{
+        grid-template-rows: 550px 100px;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .text{
+        gap: 5px;
+    }
+
+    .text h3{
+        font-size: 30px;
+        margin-bottom: .5em;
+        text-align: left;
+    }
+
+    .text h2{
+        font-size: 3.5em;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    .text p{
+        font-size: 22px;
+        text-align: left;
+        padding: 0 1em 0 0;
+    }
+
 }

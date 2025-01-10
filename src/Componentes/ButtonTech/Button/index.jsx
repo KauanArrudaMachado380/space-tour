@@ -1,11 +1,14 @@
 import styled from './Button.module.css';
 
-function ButtonCrew({onButtonClicked, name, children}) {
+function Button({onButtonClicked, onButtonChecked, name, children, active}) {
     return(
-        <button className={styled.button} onClick={() => onButtonClicked(name)}>
+        <button key={name} className={`${styled.button} ${active && styled.buttonActive}`} onClick={() => {
+            onButtonClicked(name)
+            onButtonChecked(name)
+        }}>
             {children}
         </button>
     )
 }
 
-export default ButtonCrew;
+export default Button;

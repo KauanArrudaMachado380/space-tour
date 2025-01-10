@@ -2,6 +2,33 @@
     background-color: gray;
     color: var(--accent);
     border: none;
-    padding: 10px 10px;
+    padding: 6px 6px;
     border-radius: 180px;
 }
+
+.buttonActive{
+    background-color: var(--accent);
+    color: var(--accent);
+    border: none;
+    padding: 7px 7px;
+    border-radius: 180px;
+}
+
+@media(min-width: 650px){
+    .button{
+        background-color: gray;
+        color: var(--accent);
+        border: none;
+        padding: 10px 10px;
+        border-radius: 180px;
+    }
+    
+    .buttonActive{
+        background-color: var(--accent);
+        color: var(--accent);
+        border: none;
+        padding: 10px 10px;
+        border-radius: 180px;
+    }
+}
+

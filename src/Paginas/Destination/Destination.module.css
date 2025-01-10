@@ -1,72 +1,93 @@
+/* Container pai */
+
 .container{
     display: grid;
-    grid-template-rows: 250px auto 1fr;
+    grid-template-rows: 100px 100px 500px;
     grid-template-areas: 
         'none'
         'title'
         'card';
     ;
+    row-gap: 20px;
     height: 100vh;
 }
 
 .container h1{
     grid-area: title;
-    margin-left: 9rem;
+    margin-top: .5em;
+    font-size: 24px;
     color: var(--accent);
-
+    font-family: var(--font-secundary);
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-align: center;
     strong{
         color: rgb(105, 105, 105);
     }
 }
 
+/* Conteudo */
+
 .card{
     box-sizing: border-box;
     grid-area: card;
-    justify-self: center;
     align-self: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 
     color: var(--accent);
-
-    display: grid;
-    grid-template-columns: 576px 432px;
-    justify-content: center;
-
 }
+
+/* Imagem do card */
+
+.card img{
+    width: 40%;
+}
+
+/* Texto do card */
 
 .text{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     box-sizing: border-box;
+    align-items: center;
+    gap: 10px
 }
 
 .text h2{
-    font-size: 6em;
+    font-size: 2.5em;
     font-weight: 400;
     font-family: var(--font-primary);
     padding: 1px 0;
 }
 
 .text p{
-    font-size: 22px;
+    font-size:16px;
     line-height: 1.5;
     font-family: var(--font-secundary);
     font-weight: 400;
     color: var(--secondary);
-    padding: 1px 0 30px 0;
+    margin: 0 30px;
+    text-align: center;
+    padding: 0 0 30px 0;
 
     border-bottom: 1px solid var(--secondary);
 }
 
+/* As metricas das distâncias mostradas no final do card */
+
 .metrics {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     padding: 1px 0;
 }
 
 .metrics p{
-    padding: 30px 0 5px 0;
-    font-size: 18px;
+    padding: 0 0 5px 0;
+    font-size: 16px;
     border: none;
 }
 
@@ -74,4 +95,134 @@
     color: var(--accent);
     font-size: 28px;
     font-weight: 400;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* Responsividade: Tablet */
+
+@media (min-width: 700px){
+
+    /* Container pai */
+
+    .container{
+        grid-template-rows: 170px 100px 1fr;
+    }
+
+    .container h1{
+        font-size: 28px;
+        text-align: left;
+        margin-left: 1em;
+    }
+
+    /* Texto do card*/
+
+    .text h2{
+        font-size: 5.5em;
+    }
+
+    .text p {
+        font-size: 20px;
+        padding: 0 3.5em;
+        padding-bottom: 20px;
+    }
+
+    /* As metricas do texto */
+
+    .metrics{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 50px;
+    }
+
+    .metrics p{
+        padding: 0;
+        padding-top: 20px;
+    }
+}
+
+/* Responsividade: Desktop */
+
+@media (min-width: 1400px){
+    
+    /* Container pai */
+
+    .container{
+        display: grid;
+        grid-template-rows: 200px 100px 1fr;
+        grid-template-areas:
+        'none'
+        'title'
+        'card'
+        ;
+        row-gap: 20px;
+        height: 100vh;
+    }
+
+    .container h1{
+        margin-left: 9rem;
+        font-size: 28px;
+    }
+    
+    /* Conteudo */
+
+    .card{
+        display: grid;
+        grid-template-columns: 576px 432px;
+        justify-content: center;
+    }
+
+    .card img{
+        width: 90%;
+        align-self: flex-start; 
+    }
+    
+    /* Texto do card */
+
+    .text{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .text h2{
+        font-size: 6em;
+        font-weight: 400;
+        font-family: var(--font-primary);
+        padding: 1px 0;
+    }
+    
+    .text p{
+        font-size: 22px;
+        line-height: 1.5;
+        font-family: var(--font-secundary);
+        font-weight: 400;
+        color: var(--secondary);
+        padding: 1px 0 30px 0;
+        margin: 0;
+        text-align: left;
+    
+        border-bottom: 1px solid var(--secondary);
+    }
+
+    /* As metricas do texto */
+    
+    .metrics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1px 0;
+        column-gap: 40px;
+    }
+    
+    .metrics p{
+        padding: 30px 0 5px 0;
+        font-size: 18px;
+        border: none;
+    }
+    
+    .metrics h3{
+        color: var(--accent);
+        font-size: 28px;
+        font-weight: 400;
+        text-align: left;
+    }
 }

@@ -8,6 +8,8 @@ import ButtonTech from '../../Componentes/ButtonTech';
 
 function Technology() {
 
+    /* parte responsável por controlar o conteúdo que será mostrado */
+
     const [tech, setTech] = useState(data.technology[0])
 
     function changeNewTech (name){
@@ -26,7 +28,9 @@ function Technology() {
                         <h2>{tech.name.toUpperCase()}</h2>
                         <p>{tech.description}</p>
                     </div>
-                    <img src={tech.images.portrait} alt={tech.name} />
+                    <div className={styled.containerImg}>
+                        <img src={tech.images.portrait} alt={tech.name} />
+                    </div>
                 </div>
             </section>
         </Background>

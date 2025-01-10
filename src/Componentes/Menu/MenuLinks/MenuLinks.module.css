@@ -1,19 +1,27 @@
-.link{
-    color: var(--accent);
-    text-decoration: none;
-    margin-right: 38px;
-    font-size: 15px;
-    font-family: var(--font-primary);
-    color: var(--accent);
+.ul{
+    display: flex;
+    gap: 50px
 }
 
-.link:hover{
-    border-bottom: 3px solid gray;
-    padding-bottom: 30px;
+.ul li{
+    list-style: none;
+    padding: .5em 0;
 }
 
-.linkAcessado{
+.liActive{
     box-sizing: border-box;
-    padding-bottom: 30px;
-    border-bottom: 3px solid var(--accent);
+    border-right: 6px solid var(--accent);
+}
+
+@media(min-width: 650px){
+
+    .ul li{
+        padding: 2em 0;
+    }
+
+    .liActive{
+        border-right: none;
+        border-bottom: 4px solid var(--accent);
+        padding: 2em 0;
+    }
 }

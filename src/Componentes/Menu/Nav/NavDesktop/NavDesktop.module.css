@@ -1,0 +1,9 @@
+.navDesktop{
+    display: none;
+}
+
+@media (min-width: 700px){
+    .navDesktop{
+        display: block;
+    }
+}

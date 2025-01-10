@@ -1,6 +1,17 @@
+
 .containerButton{
     display: flex;
-    gap: 40px;
+    gap: 25px;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
+}
+
+@media(min-width: 1400px){
+
+    .containerButton{
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        justify-content: left;
+    }
 }

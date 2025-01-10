@@ -1,9 +1,13 @@
 import styled from './Button.module.css';
 
-function ButtonCrew({onButtonClicked, name}) {
+function ButtonCrew({onButtonClicked, name, onButtonChecked, active}) {
+
     return(
-        <button className={styled.button} onClick={() => onButtonClicked(name)}>
-            
+        <button className={`${styled.button} ${active && styled.buttonActive}`} onClick={() => {
+            onButtonClicked(name);
+            onButtonChecked(name)
+        }
+        }>
         </button>
     )
 }

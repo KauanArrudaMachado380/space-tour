@@ -1,11 +1,39 @@
 .button{
     background-color: transparent;
     color: var(--accent);
-    border: 2px solid var(--accent);
+    border: 1px solid var(--accent);
+    text-align: center;
 
-    font-size: 32px;
-    font-family: var(--font-secundary);
+    font-size: 20px;
+    font-family: var(--font-primary);
 
-    padding: 20px 32px 22px 32px;
+    padding: 14px 22px 14px 22px;
     border-radius: 180px;
+
+    cursor: pointer;
+}
+
+.buttonActive{
+    background-color: var(--accent);
+    color: var(--primary);
+    border: none;
+    padding: 14px 24px 14px 24px;
+    border-radius: 180px;
+}
+
+@media(min-width: 1400px){
+
+    .button{
+        font-size: 32px;
+        padding: 20px 32px 22px 32px;
+    }
+
+    .button:hover{
+        border: 2px solid var(--accent);
+    }
+
+    .buttonActive{
+        padding: 20px 32px 22px 32px;
+    }
+
 }

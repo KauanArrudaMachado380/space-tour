@@ -7,6 +7,8 @@ import { useState } from 'react';
 
 function Destination() {
 
+    /* parte responsável por controlar o conteúdo que será mostrado */
+
     const [destinations, setDestinations] = useState(data.destinations[0]);
 
     function changeDestination (nome) {
